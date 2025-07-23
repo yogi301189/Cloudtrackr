@@ -1,0 +1,11 @@
+.terraform/
+*.exe
+*.zip
+*.pyc
+*.pkl
+__pycache__/
+terraform/
+.env
+*.log
+*.pem
+*.pub

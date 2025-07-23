@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudtrackr-backend
+  namespace: cloudtrackr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudtrackr-backend
+  template:
+    metadata:
+      labels:
+        app: cloudtrackr-backend
+    spec:
+      containers:
+        - name: backend
+          image: cloudtrackr-backend:latest
+          ports:
+            - containerPort: 5000
+          imagePullPolicy: IfNotPresent
